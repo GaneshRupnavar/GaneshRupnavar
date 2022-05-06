@@ -1,0 +1,19 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class read {
+    public static <filenotFoundExeption extends Throwable> void main(String[] args) throws FileNotFoundException {
+        char[] data = new char[30];
+        try {
+            FileReader input = new FileReader("data1.txt");
+            input.read(data);
+            System.out.println("data receved from a file");
+            System.out.println(data);
+            input.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("file read error");
+        }
+    }
+}

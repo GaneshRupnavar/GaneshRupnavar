@@ -1,0 +1,13 @@
+
+
+import java.io.File;
+
+public class delete {
+    public static void main(String[] args) {
+        File myFile= new File ("xyz.txt");
+        if (myFile.delete());{
+        System.out.println("FILE DELETED:"+myFile.getName()+"successfull");
+    }
+
+        }
+    }

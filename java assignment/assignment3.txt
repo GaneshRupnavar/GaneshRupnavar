@@ -1,0 +1,17 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class update {
+    public static void main(String[] args) {
+        String data="Ganesh,9,30,05/01/1998,05/05/2022";
+        try{
+            FileWriter output = new FileWriter("data .txt");
+            output.write(data);
+            System.out.println("data is written succesfully.");
+            output.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("file write error");
+        }
+    }
+}

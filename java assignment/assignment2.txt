@@ -1,0 +1,19 @@
+import java.io.File;
+import java.io.IOException;
+
+public class createfile {
+    public static void main(String[] args) {
+        File myFile = new File("data.txt");
+        try{
+            if(myFile.createNewFile()){
+                System.out.println("file create succesfully");
+    } else {
+                System.out.println("file create error");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("File error");
+        }
+    }
+}
